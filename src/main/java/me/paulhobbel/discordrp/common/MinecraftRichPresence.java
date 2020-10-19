@@ -6,6 +6,7 @@ import me.paulhobbel.discordrp.common.manager.DiscordAssetManager;
 import me.paulhobbel.discordrp.common.config.DiscordRPConfig;
 import me.paulhobbel.discordrp.api.IDiscordRPManifest;
 import net.minecraft.client.resources.I18n;
+import me.paulhobbel.discordrp.common.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,8 +31,13 @@ public class MinecraftRichPresence extends DiscordRichPresence {
 
         if(dimension != null) {
             detailParts.add(I18n.format("discordrp.dimension", dimension.getTitle()));
-
-            largeImageKey = DiscordAssetManager.getKey("dim_" + dimension.getAssetKey());
+            String modifiedAsset = dimension.getAssetKey();
+            modifiedAsset = modifiedAsset.replaceAll(" ", "_");
+            modifiedAsset = modifiedAsset.replaceAll(":", "_");
+            modifiedAsset = modifiedAsset.replaceAll("\\.", "_");
+            Log.info("Replacing characters in Dimension's name: " + dimension.getAssetKey() + " is now " + modifiedAsset);
+            Log.info("Updated Dimension: " + "dim_" + modifiedAsset);
+            largeImageKey = DiscordAssetManager.getKey("dim_" + modifiedAsset);
             largeImageText = dimension.getAssetText();
         } else if(originalDetails != null) {
             detailParts.add(originalDetails);

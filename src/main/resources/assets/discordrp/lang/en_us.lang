@@ -6,7 +6,7 @@
 # General
 discordrp.loading=Loading Minecraft
 discordrp.mainmenu=In The Main Menu
-discordrp.dimension=In The %1$s
+discordrp.dimension%1$s
 discordrp.singleplayer=Singleplayer
 discordrp.multiplayer=Multiplayer
 

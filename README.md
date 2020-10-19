@@ -1,4 +1,4 @@
-# DiscordRP
-[![Build status](https://ci.appveyor.com/api/projects/status/rw8qx4iejtk10f88?svg=true)](https://ci.appveyor.com/project/ItsDizzy/discordrp)
+# Minecraft-DiscordRP
 
-A Minecraft mod which adds Discord integration into Minecraft
+A Minecraft mod which adds Discord integration into Minecraft  
+Forked from [DiscordRP](https://github.com/paulhobbel/DiscordRP), I just wanted to address some bugs

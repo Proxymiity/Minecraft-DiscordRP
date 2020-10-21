@@ -35,6 +35,7 @@ public class MinecraftRichPresence extends DiscordRichPresence {
             modifiedAsset = modifiedAsset.replaceAll(" ", "_");
             modifiedAsset = modifiedAsset.replaceAll(":", "_");
             modifiedAsset = modifiedAsset.replaceAll("\\.", "_");
+            modifiedAsset = modifiedAsset.toLowerCase();
             Log.info("Replacing characters in Dimension's name: " + dimension.getAssetKey() + " is now " + modifiedAsset);
             Log.info("Updated Dimension: " + "dim_" + modifiedAsset);
             largeImageKey = DiscordAssetManager.getKey("dim_" + modifiedAsset);
